@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+
+mkdir "$1" || exit
+echo "Created semester directroy: $1"
+
+cd "$1" || exit
+mkdir comp140 comp128 math212 projects
+echo "Created coures directories: comp 140, comp182, math212, projects"
+
+touch README.md
+printf "Semester: %s\nCurrent date: %s\nCourse Descriptions:\n" "$1" "$(date)" > README.md
+echo "Created README.md"
